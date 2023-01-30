@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="radhe.js" defer></script>
+		<title>Multi_step form</title>
+	</head>
+	<body>
+		<!-- <h1>Radhey Shyam</h1> -->
+		<main class="multistep-form-container">
+			<div class="steps-counter">
+				<!--  -->
+				<img class="sidebar" src="./assets/bg-sidebar-desktop.svg" alt="" />
+
+				<div class="steps-counter-steps">
+					<!--  -->
+					<div class="steps-counter-step">
+						<div class="circle current">1</div>
+						<div class="text-white">
+							<span class="text-sm text-gray">STEP 1</span>
+							<h5>YOUR INFO</h5>
+						</div>
+					</div>
+
+					<!--  -->
+
+					<!--  -->
+					<div class="steps-counter-step">
+						<div class="circle">2</div>
+						<div class="text-white">
+							<span class="text-sm text-gray">STEP 2</span>
+							<h5>SELECT PLAN</h5>
+						</div>
+					</div>
+					<!--  -->
+
+					<!--  -->
+					<div class="steps-counter-step">
+						<div class="circle">3</div>
+						<div class="text-white">
+							<span class="text-sm text-gray">STEP 3</span>
+							<h5>ADD-ONS</h5>
+						</div>
+					</div>
+					<!--  -->
+
+					<!--  -->
+					<div class="steps-counter-step">
+						<div class="circle">4</div>
+						<div class="text-white">
+							<span class="text-sm text-gray">STEP 4</span>
+							<h5>SUMMARY</h5>
+						</div>
+					</div>
+					<!--  -->
+
+					<!-- End of Steps container -->
+				</div>
+
+				<!--  -->
+			</div>
+			<!-- End of left side -->
+
+			<form class="form">
+				<div class="form-container">
+					<!-- Steps -->
+					<div class="right-step" data-step="1">
+						<h2>Personal Info</h2>
+						<p class="text-gray pb-2">
+							Please provide your name, email address and phone number.
+						</p>
+
+						<div class="flex-col gap-2">
+							<div class="form-input-container">
+								<label for="name">Name</label>
+								<input
+									placeholder="Your Name"
+									type="text"
+									name="name"
+									id="name-field"
+								/>
+							</div>
+							<div class="form-input-container">
+								<label for="email">Email Address</label>
+								<input
+									placeholder="Email @ Address"
+									type="email"
+									name="email"
+									id="name-field"
+								/>
+							</div>
+							<div class="form-input-container">
+								<label for="number">Phone Number</label>
+								<input
+									placeholder="Ph: XXXXX0000"
+									type="text"
+									name="number"
+									id="name-field"
+								/>
+							</div>
+						</div>
+					</div>
+					<button class="btn btn-next mr-6" data-next-step>Next Step</button>
+
+					<!-- next -->
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
