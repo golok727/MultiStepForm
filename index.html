@@ -17,7 +17,7 @@
 
 				<div class="steps-counter-steps">
 					<!--  -->
-					<div class="steps-counter-step">
+					<div class="steps-counter-step" data-counter-step="1">
 						<div class="circle current">1</div>
 						<div class="text-white">
 							<span class="text-sm text-gray">STEP 1</span>
@@ -28,7 +28,7 @@
 					<!--  -->
 
 					<!--  -->
-					<div class="steps-counter-step">
+					<div class="steps-counter-step" data-counter-step="2">
 						<div class="circle">2</div>
 						<div class="text-white">
 							<span class="text-sm text-gray">STEP 2</span>
@@ -38,7 +38,7 @@
 					<!--  -->
 
 					<!--  -->
-					<div class="steps-counter-step">
+					<div class="steps-counter-step" data-counter-step="3">
 						<div class="circle">3</div>
 						<div class="text-white">
 							<span class="text-sm text-gray">STEP 3</span>
@@ -48,7 +48,7 @@
 					<!--  -->
 
 					<!--  -->
-					<div class="steps-counter-step">
+					<div class="steps-counter-step" data-counter-step="4">
 						<div class="circle">4</div>
 						<div class="text-white">
 							<span class="text-sm text-gray">STEP 4</span>
@@ -64,7 +64,7 @@
 			</div>
 			<!-- End of left side -->
 
-			<form class="form">
+			<form class="form" data-main-form>
 				<div class="form-container">
 					<!-- Steps -->
 
@@ -82,27 +82,30 @@
 								<label for="name">Name</label>
 								<input
 									placeholder="Your Name"
+									data-name-input
 									type="text"
 									name="name"
-									id="name-field"
+									id="name"
 								/>
 							</div>
 							<div class="form-input-container">
 								<label for="email">Email Address</label>
 								<input
 									placeholder="Email @ Address"
+									data-email-input
 									type="email"
 									name="email"
-									id="name-field"
+									id="email"
 								/>
 							</div>
 							<div class="form-input-container">
 								<label for="number">Phone Number</label>
 								<input
 									placeholder="Ph: XXXXX0000"
+									data-phone-input
 									type="text"
 									name="number"
-									id="name-field"
+									id="number"
 								/>
 							</div>
 						</div>
@@ -120,20 +123,20 @@
 						<!-- Plans -->
 						<div class="plans">
 							<!-- * Active class for active effect -->
-							<div class="plan active">
+							<div class="plan active" data-plan-type="ARCADE">
 								<img src="assets/icon-arcade.svg" alt="" />
 								<h5>Arcade</h5>
-								<p class="text-gray">$9/mo</p>
+								<p class="text-gray">$9/<span data-moy="">mo</span></p>
 							</div>
-							<div class="plan">
+							<div class="plan" data-plan-type="ADVANCED">
 								<img src="assets/icon-advanced.svg" alt="" />
 								<h5>Advanced</h5>
-								<p class="text-gray">$12/mo</p>
+								<p class="text-gray">$12/<span data-moy="">mo</span></p>
 							</div>
-							<div class="plan">
+							<div class="plan" data-plan-type="PRO">
 								<img src="assets/icon-pro.svg" alt="" />
 								<h5>Pro</h5>
-								<p class="text-gray">$15/mo</p>
+								<p class="text-gray">$15/<span data-moy="">mo</span></p>
 							</div>
 						</div>
 						<!--  End of plans -->
@@ -144,6 +147,7 @@
 							<input
 								type="checkbox"
 								name="Toggle"
+								data-toggle-button
 								id=""
 								class="toggle-button"
 							/>
@@ -163,38 +167,43 @@
 						<div class="addons">
 							<div class="addon" data-addon>
 								<div class="addon__left">
-									<input type="checkbox" name="" id="" />
+									<input data-addon-checkbox type="checkbox" name="ONS" id="" />
 									<div>
 										<h5>Online Service</h5>
 										<p class="text-gray">Access to multiplayer games</p>
 									</div>
 								</div>
 								<div class="addon__right">
-									<p>+&dollar;1/mo</p>
+									<p>+&dollar;1/<span data-moy="">mo</span></p>
 								</div>
 							</div>
 							<div class="addon" data-addon>
 								<div class="addon__left">
-									<input type="checkbox" name="" id="" />
+									<input data-addon-checkbox type="checkbox" name="LST" id="" />
 									<div>
 										<h5>Larger storage</h5>
 										<p class="text-gray">Extra 1TB of cloud storage</p>
 									</div>
 								</div>
 								<div class="addon__right">
-									<p>+&dollar;2/mo</p>
+									<p>+&dollar;2/<span data-moy="">mo</span></p>
 								</div>
 							</div>
 							<div class="addon" data-addon>
 								<div class="addon__left">
-									<input type="checkbox" name="" id="" />
+									<input
+										data-addon-checkbox
+										type="checkbox"
+										name="CUSPRO"
+										id=""
+									/>
 									<div>
 										<h5>Customizable Profile</h5>
 										<p class="text-gray">Custom theme on your profile</p>
 									</div>
 								</div>
 								<div class="addon__right">
-									<p>+&dollar;2/mo</p>
+									<p>+&dollar;2/<span data-moy="">mo</span></p>
 								</div>
 							</div>
 						</div>
@@ -214,7 +223,7 @@
 									<h5>Arcade(Monthly)</h5>
 									<a href="#">Change</a>
 								</div>
-								<h5>&dollar;9/mo</h5>
+								<h5>&dollar;9/<span data-moy="">mo</span></h5>
 							</div>
 
 							<!-- ?Rule -->
@@ -223,18 +232,22 @@
 							<div class="bill__addons">
 								<div>
 									<p class="text-gray text-sm">Online Services</p>
-									<span class="text-sm">+&dollar;1/mo</span>
+									<span class="text-sm"
+										>+&dollar;1/<span data-moy="">mo</span></span
+									>
 								</div>
 								<div>
 									<p class="text-gray text-sm">Larger Storage</p>
-									<span class="text-sm">+&dollar;2/mo</span>
+									<span class="text-sm"
+										>+&dollar;2/<span data-moy="">mo</span></span
+									>
 								</div>
 							</div>
 						</div>
 
 						<div class="total-pricing">
 							<p class="text-gray text-sm">Total(per month)</p>
-							<h3>+&dollar;12/mo</h3>
+							<h3>+&dollar;12/<span data-moy="">mo</span></h3>
 						</div>
 					</div>
 					<div class="lower-buttons">
@@ -242,6 +255,7 @@
 						<button data-nextstep class="btn btn-next mr-6" data-next-step>
 							Next Step
 						</button>
+						<input class="hidden" type="submit" value="Submit" data-submit />
 					</div>
 				</div>
 				<!-- next -->

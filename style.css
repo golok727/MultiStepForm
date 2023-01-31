@@ -126,7 +126,7 @@ body {
 	box-shadow: var(--shadow-light);
 	border-radius: 10px;
 	display: flex;
-	/* min-width: calc(100vw - 30vw); */
+	min-width: 1000px;
 	overflow: hidden;
 }
 .sidebar {
@@ -166,6 +166,13 @@ body {
 	line-height: 30px;
 	color: black;
 	border: none;
+}
+
+.error {
+	border-color: var(--clr--primary-strawberry_red) !important;
+}
+.error::placeholder {
+	color: hsl(354, 84%, 57%);
 }
 
 .steps-counter-step {
@@ -210,6 +217,12 @@ body {
 	display: flex;
 	gap: 1rem;
 	justify-content: space-between;
+}
+.plan * {
+	user-select: none;
+}
+.plan *:not(div) {
+	pointer-events: none;
 }
 .plan {
 	flex: 1;
@@ -319,4 +332,8 @@ body {
 
 .total-pricing h3 {
 	color: var(--clr--primary-purplish_blue);
+}
+
+.right-step {
+	width: 100%;
 }
