@@ -83,6 +83,34 @@ body {
 	align-self: flex-end;
 }
 
+.toggle-button {
+	position: relative;
+	cursor: pointer;
+	width: 2.5rem;
+	height: 1.3rem;
+	border-radius: 1vmax;
+	appearance: none;
+	background-color: var(--clr--primary-marine_blue);
+}
+
+.toggle-button:before {
+	content: "";
+	cursor: pointer;
+	position: absolute;
+	background-color: white;
+	top: 4px;
+	left: 4px;
+	border-radius: 50%;
+	--val: 0.8rem;
+	height: var(--val);
+	width: var(--val);
+	transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:checked::before {
+	translate: 20px;
+}
+
 .multistep-form-container {
 	background-color: var(--clr-neutral--white);
 	box-shadow: var(--shadow-light);
@@ -179,6 +207,7 @@ body {
 	border-radius: 7px;
 	min-width: 1rem;
 	padding: 1rem 4rem 1rem 1rem;
+	transition: border 0.2s ease;
 }
 .plan:hover {
 	border-color: var(--clr--primary-purplish_blue);
@@ -201,29 +230,36 @@ body {
 	padding: 0.7rem;
 }
 
-.toggle-button {
-	position: relative;
-	cursor: pointer;
-	width: 2.5rem;
-	height: 1.3rem;
-	border-radius: 1vmax;
-	appearance: none;
-	background-color: var(--clr--primary-marine_blue);
+.addons {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
 }
 
-.toggle-button:before {
-	content: "";
-	cursor: pointer;
-	position: absolute;
-	background-color: white;
-	top: 4px;
-	left: 4px;
-	border-radius: 50%;
-	--val: 0.8rem;
-	height: var(--val);
-	width: var(--val);
+.addon {
+	display: flex;
+	border: 1px solid var(--clr-neutral--light-gray);
+	border-radius: 7px;
+	padding: 0.8rem 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+	transition: border 0.2s ease;
+}
+.addon p {
+	font-size: 0.7rem;
+}
+.addon:hover {
+	border-color: var(--clr--primary-purplish_blue);
+}
+.addon.active {
+	border-color: var(--clr--primary-purplish_blue);
+	background-color: var(--clr-neutral--magnolia);
 }
 
-.toggle-button:checked::before {
-	translate: 20px;
+.addon__left {
+	display: flex;
+	gap: 1.7rem;
+}
+.addon__right p {
+	color: var(--clr--primary-purplish_blue);
 }
