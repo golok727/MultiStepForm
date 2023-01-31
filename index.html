@@ -71,7 +71,7 @@
 					<!-- Step-1 -->
 					<!-- TODO Remove the hidden class -->
 
-					<div class="right-step hidden" data-step="1">
+					<div class="right-step" data-step="1" data-current-step>
 						<h2>Personal Info</h2>
 						<p class="text-gray pb-2">
 							Please provide your name, email address and phone number.
@@ -153,7 +153,7 @@
 					<!-- End of step 2 -->
 
 					<!-- ** Step 3 -->
-					<div class="right-step" data-step="3">
+					<div class="right-step hidden" data-step="3">
 						<h2>Pick add-ons</h2>
 						<p class="text-gray pb-2">
 							Add-ons help enhance your gaming experience
@@ -199,11 +199,52 @@
 							</div>
 						</div>
 					</div>
+					<!-- !End of Step 3 -->
 
-					<button class="btn btn-next mr-6" data-next-step>Next Step</button>
+					<!-- *Step 4 -->
+					<div class="right-step hidden" data-step="4">
+						<h2>Finishing Up</h2>
+						<p class="text-gray pb-2">
+							Double-check everything looks OK before confirming.
+						</p>
 
-					<!-- next -->
+						<div class="final-bill-statement">
+							<div class="bill__plan-type">
+								<div>
+									<h5>Arcade(Monthly)</h5>
+									<a href="#">Change</a>
+								</div>
+								<h5>&dollar;9/mo</h5>
+							</div>
+
+							<!-- ?Rule -->
+							<div class="hr"></div>
+
+							<div class="bill__addons">
+								<div>
+									<p class="text-gray text-sm">Online Services</p>
+									<span class="text-sm">+&dollar;1/mo</span>
+								</div>
+								<div>
+									<p class="text-gray text-sm">Larger Storage</p>
+									<span class="text-sm">+&dollar;2/mo</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="total-pricing">
+							<p class="text-gray text-sm">Total(per month)</p>
+							<h3>+&dollar;12/mo</h3>
+						</div>
+					</div>
+					<div class="lower-buttons">
+						<button data-goback class="btn btn-go-back">Go Back</button>
+						<button data-nextstep class="btn btn-next mr-6" data-next-step>
+							Next Step
+						</button>
+					</div>
 				</div>
+				<!-- next -->
 			</form>
 		</main>
 	</body>

@@ -15,8 +15,8 @@
 
 	--clr-neutral--cool-gray: hsl(231, 11%, 63%);
 	--clr-neutral--light-gray: hsl(229, 24%, 87%);
-	--clr-neutral--magnolia: hsl(217, 100%, 97%);
-	--clr-neutral--alabaster: hsl(231, 100%, 99%);
+	--clr-neutral--magnolia: hsl(216, 43%, 93%);
+	--clr-neutral--alabaster: hsla(228, 100%, 99%, 0.834);
 	--clr-neutral--white: hsl(0, 0%, 100%);
 	--shadow-light: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -69,6 +69,7 @@ body {
 .btn {
 	background-color: var(--clr--primary-marine_blue);
 	color: white;
+	cursor: pointer;
 	width: max-content;
 	padding: 0.7rem 0.8rem;
 	border: none;
@@ -82,7 +83,11 @@ body {
 .btn-next {
 	align-self: flex-end;
 }
-
+.btn-go-back {
+	font-weight: 700;
+	color: var(--clr--primary-marine_blue);
+	background: none;
+}
 .toggle-button {
 	position: relative;
 	cursor: pointer;
@@ -92,7 +97,12 @@ body {
 	appearance: none;
 	background-color: var(--clr--primary-marine_blue);
 }
-
+.lower-buttons {
+	display: flex;
+	width: 100%;
+	padding-left: 6rem;
+	justify-content: space-between;
+}
 .toggle-button:before {
 	content: "";
 	cursor: pointer;
@@ -261,5 +271,52 @@ body {
 	gap: 1.7rem;
 }
 .addon__right p {
+	color: var(--clr--primary-purplish_blue);
+}
+
+.final-bill-statement {
+	background-color: var(--clr-neutral--alabaster);
+	border-radius: 7px;
+	padding: 1rem 2rem;
+}
+.bill__plan-type {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+.bill__plan-type a {
+	font-size: 0.8rem;
+}
+.hr {
+	border-top: 1px solid var(--clr-neutral--light-gray);
+}
+.bill__addons {
+	display: flex;
+	margin-top: 0.5rem;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+.bill__addons p {
+	font-size: 0.7rem;
+}
+
+.bill__addons span {
+	font-weight: 700;
+	font-size: 0.7rem;
+}
+
+.bill__addons div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.total-pricing {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+
+.total-pricing h3 {
 	color: var(--clr--primary-purplish_blue);
 }
