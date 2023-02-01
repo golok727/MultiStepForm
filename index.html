@@ -123,7 +123,7 @@
 						<!-- Plans -->
 						<div class="plans">
 							<!-- * Active class for active effect -->
-							<div class="plan active" data-plan-type="ARCADE">
+							<div class="plan fade-in active" data-plan-type="ARCADE">
 								<img src="assets/icon-arcade.svg" alt="" />
 								<h5>Arcade</h5>
 								<p class="text-gray">
@@ -131,7 +131,11 @@
 									<span data-moy="">mo</span>
 								</p>
 							</div>
-							<div class="plan" data-plan-type="ADVANCED">
+							<div
+								class="plan fade-in"
+								data-delay="2s"
+								data-plan-type="ADVANCED"
+							>
 								<img src="assets/icon-advanced.svg" alt="" />
 								<h5>Advanced</h5>
 								<p class="text-gray">
@@ -139,7 +143,7 @@
 									<span data-moy="">mo</span>
 								</p>
 							</div>
-							<div class="plan" data-plan-type="PRO">
+							<div class="plan fade-in" data-delay="3" data-plan-type="PRO">
 								<img src="assets/icon-pro.svg" alt="" />
 								<h5>Pro</h5>
 								<p class="text-gray">
@@ -281,7 +285,7 @@
 
 						<div class="total-pricing">
 							<p class="text-gray text-sm">Total(<span data-per-my></span>)</p>
-							<h3>
+							<h3 class="total-animation">
 								+&dollar;<span data-final-total></span>/<span data-moy=""
 									>mo</span
 								>

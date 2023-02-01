@@ -162,6 +162,7 @@ body {
 	height: 30px;
 	display: block;
 	line-height: 26px;
+	transition: background-color 0.5s ease-in-out, color 0.6s ease;
 }
 .current {
 	background-color: var(--clr--primary-light_blue);
@@ -169,10 +170,12 @@ body {
 	line-height: 30px;
 	color: black;
 	border: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .error {
 	border-color: var(--clr--primary-strawberry_red) !important;
+	animation: shake 1s ease;
 }
 .error::placeholder {
 	color: hsl(354, 84%, 57%);
@@ -237,13 +240,14 @@ body {
 	border-radius: 7px;
 	min-width: 1rem;
 	padding: 1rem 4rem 1rem 1rem;
-	transition: border 0.2s ease;
+	transition: all 0.2s ease;
 }
 .plan:hover {
 	border-color: var(--clr--primary-purplish_blue);
 }
 .plan.active {
 	border-color: var(--clr--primary-purplish_blue);
+	scale: 1.02;
 	background-color: var(--clr-neutral--magnolia);
 }
 .plan > img {
@@ -343,4 +347,67 @@ body {
 
 .right-step {
 	width: 100%;
+}
+
+.total-animation {
+	animation: billed 2s ease;
+}
+
+@keyframes billed {
+	0% {
+		opacity: 0.5;
+		scale: 12;
+		rotate: 40deg;
+	}
+	70% {
+		opacity: 1;
+		rotate: 0deg;
+		scale: 1;
+	}
+	80% {
+		rotate: -40deg;
+	}
+	90% {
+		rotate: 40deg;
+	}
+	100% {
+		rotate: 0deg;
+	}
+}
+
+.fade-in {
+	animation: fade-in 2s ease;
+	animation-delay: attr(data-delay);
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		scale: 0;
+	}
+	100% {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes shake {
+	0% {
+		rotate: -0.7deg;
+	}
+	20% {
+		rotate: 0deg;
+	}
+
+	50% {
+		rotate: 0.7deg;
+	}
+	60% {
+		rotate: 0deg;
+	}
+	80% {
+		rotate: -0.7deg;
+	}
+	100% {
+		rotate: 0deg;
+	}
 }

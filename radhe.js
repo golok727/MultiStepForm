@@ -125,7 +125,6 @@ nextStepBtn.addEventListener("click", (e) => {
 
 	// Steps processing and validation
 	if (currentStep === 1) if (!Step1Register()) return;
-	console.log(completedForm);
 
 	if (currentStep === 2) Step2Register();
 	if (currentStep === 3) Step3Register();
@@ -192,8 +191,6 @@ function Step3Register() {
 	});
 	completedForm["addons"] = addons;
 
-	console.log(completedForm);
-
 	const total = calculateTotalBill();
 	createBill(total);
 }
@@ -236,7 +233,6 @@ function toggleAndDisplayMonthlyYearlyPrices() {
 }
 
 function createBill(total) {
-	console.log("Creating Bill", total);
 	const billPlanTypeSpan = document.querySelector("[data-bill-plan-type]");
 	const billBillingPeriodSpan = document.querySelector(
 		"[data-bill-billing-period]"
@@ -249,10 +245,6 @@ function createBill(total) {
 		completedForm.plan.substring(1).toLowerCase();
 
 	billBillingPeriodSpan.innerText = isYearlyBilling ? "Yearly" : "Monthly";
-	console.log({
-		billPlanTypeSpan,
-		billBillingPeriodSpan,
-	});
 
 	billingPlanPrice.innerText = total.planCosts;
 
@@ -280,6 +272,8 @@ function createBill(total) {
 		
 		`;
 		});
+		completedForm["total"] = total;
+		console.log(completedForm);
 	}
 
 	const perMySpan = document.querySelector("[data-per-my]");
