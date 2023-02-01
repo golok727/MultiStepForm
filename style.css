@@ -85,6 +85,8 @@ body {
 }
 .btn-go-back {
 	font-weight: 700;
+	padding: 0;
+	height: 0;
 	color: var(--clr--primary-marine_blue);
 	background: none;
 }
@@ -101,6 +103,7 @@ body {
 	display: flex;
 	width: 100%;
 	padding-left: 6rem;
+	padding-bottom: 2rem;
 	justify-content: space-between;
 }
 .toggle-button:before {
@@ -181,6 +184,9 @@ body {
 	align-items: center;
 }
 
+.form {
+	flex: 1;
+}
 .form-container {
 	display: flex;
 	flex-direction: column;
@@ -208,6 +214,7 @@ body {
 
 .right-step {
 	padding: 5rem 6rem;
+	flex: 1;
 }
 .mr-6 {
 	margin-right: 6rem;
