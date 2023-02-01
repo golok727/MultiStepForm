@@ -17,7 +17,7 @@ let COSTS = {
 const billingPeriodToggleButton = document.querySelector(
 	"[data-toggle-button]"
 );
-
+toggleAndDisplayMonthlyYearlyPrices();
 let billing = billingPeriodToggleButton.checked ? "yr" : "mo";
 billingPeriodToggleButton.addEventListener("change", (e) => {
 	billing = e.target.checked ? "yr" : "mo";
@@ -33,8 +33,10 @@ billingPeriodToggleButton.addEventListener("change", (e) => {
 		PRO: isYearlyBilling ? 150 : 15,
 		ONS: isYearlyBilling ? 10 : 1,
 		LST: isYearlyBilling ? 20 : 2,
-		CUSPRO: isYearlyBilling ? 0 : 2,
+		CUSPRO: isYearlyBilling ? 20 : 2,
 	};
+
+	toggleAndDisplayMonthlyYearlyPrices();
 });
 
 const completedForm = {
@@ -83,7 +85,7 @@ const goBackBtn = document.querySelector("[data-goback]");
 const nextStepBtn = document.querySelector("[data-nextstep]");
 const submitButton = document.querySelector("[data-submit]");
 if (currentStep === 1) {
-	goBackBtn.classList.add("hidden");
+	~goBackBtn.classList.add("hidden");
 }
 
 // Buttons Event Listeners
@@ -170,13 +172,9 @@ function Step1Register() {
 
 	return success;
 }
-function Step2Register() {
-	console.log("2");
-}
+function Step2Register() {}
 
 function Step3Register() {
-	console.log("3");
-
 	let addons = [];
 	const checkboxes = document.querySelectorAll("[data-addon-checkbox]");
 	checkboxes.forEach((checkbox) => {
@@ -189,7 +187,6 @@ function Step3Register() {
 	console.log(completedForm);
 
 	const total = calculateTotalBill();
-	console.log(total);
 }
 function handleSubmit(e) {
 	/** @type {SubmitEvent} e */
@@ -216,6 +213,18 @@ function calculateTotalBill() {
 
 // Todo
 function showErrorCode() {}
+
+function toggleAndDisplayMonthlyYearlyPrices() {
+	const planSpans = document.querySelectorAll("[data-plan-price]");
+	planSpans.forEach((span) => {
+		span.innerText = COSTS[span.getAttribute("data-plan-price")];
+	});
+
+	const addonSpans = document.querySelectorAll("[data-addon-price]");
+	addonSpans.forEach((span) => {
+		span.innerText = COSTS[span.getAttribute("data-addon-price")];
+	});
+}
 
 // Plans Click control
 
