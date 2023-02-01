@@ -14,9 +14,17 @@ let COSTS = {
 	CUSPRO: 2,
 };
 
+const addonAbb = {
+	ONS: "Online Services",
+	LST: "Larger Storage",
+	CUSPRO: "Customizable Profile",
+};
+
 const billingPeriodToggleButton = document.querySelector(
 	"[data-toggle-button]"
 );
+let isYearlyBilling = false;
+
 toggleAndDisplayMonthlyYearlyPrices();
 let billing = billingPeriodToggleButton.checked ? "yr" : "mo";
 billingPeriodToggleButton.addEventListener("change", (e) => {
@@ -25,7 +33,7 @@ billingPeriodToggleButton.addEventListener("change", (e) => {
 		.querySelectorAll("[data-moy]")
 		.forEach((span) => (span.innerText = billing));
 
-	const isYearlyBilling = billing === "yr";
+	isYearlyBilling = billing === "yr";
 
 	COSTS = {
 		ARCADE: isYearlyBilling ? 90 : 9,
@@ -116,7 +124,7 @@ nextStepBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 
 	// Steps processing and validation
-	if (currentStep === 1) if (!Step1Register() && __prod__) return;
+	if (currentStep === 1) if (!Step1Register()) return;
 	console.log(completedForm);
 
 	if (currentStep === 2) Step2Register();
@@ -187,6 +195,7 @@ function Step3Register() {
 	console.log(completedForm);
 
 	const total = calculateTotalBill();
+	createBill(total);
 }
 function handleSubmit(e) {
 	/** @type {SubmitEvent} e */
@@ -224,6 +233,59 @@ function toggleAndDisplayMonthlyYearlyPrices() {
 	addonSpans.forEach((span) => {
 		span.innerText = COSTS[span.getAttribute("data-addon-price")];
 	});
+}
+
+function createBill(total) {
+	console.log("Creating Bill", total);
+	const billPlanTypeSpan = document.querySelector("[data-bill-plan-type]");
+	const billBillingPeriodSpan = document.querySelector(
+		"[data-bill-billing-period]"
+	);
+
+	const billingPlanPrice = document.querySelector("[data-billing-plan-price]");
+
+	billPlanTypeSpan.innerText =
+		completedForm.plan.charAt(0) +
+		completedForm.plan.substring(1).toLowerCase();
+
+	billBillingPeriodSpan.innerText = isYearlyBilling ? "Yearly" : "Monthly";
+	console.log({
+		billPlanTypeSpan,
+		billBillingPeriodSpan,
+	});
+
+	billingPlanPrice.innerText = total.planCosts;
+
+	const hr = document.querySelector(".hr");
+	const billAddonsDiv = document.querySelector("[data-addons-bill]");
+
+	if (completedForm.addons.length <= 0) {
+		hr.classList.add("hidden");
+		billAddonsDiv.classList.add("hidden");
+	} else {
+		hr.classList.remove("hidden");
+		billAddonsDiv.classList.remove("hidden");
+
+		billAddonsDiv.innerHTML = "";
+		completedForm.addons.forEach((addon) => {
+			billAddonsDiv.innerHTML += `
+						<div>
+									<p class="text-gray text-sm">${addonAbb[addon]}</p>
+									<span class="text-sm"
+										>+&dollar;${COSTS[addon]}/<span data-moy="">${
+				isYearlyBilling ? "yr" : "mo"
+			}</span></span
+									>
+								</div>
+		
+		`;
+		});
+	}
+
+	const perMySpan = document.querySelector("[data-per-my]");
+	const finalTotalSpan = document.querySelector("[data-final-total]");
+	perMySpan.innerText = isYearlyBilling ? "per year" : "per month";
+	finalTotalSpan.innerText = total.total;
 }
 
 // Plans Click control

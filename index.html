@@ -244,16 +244,26 @@
 						<div class="final-bill-statement">
 							<div class="bill__plan-type">
 								<div>
-									<h5>Arcade(Monthly)</h5>
+									<h5>
+										<span data-bill-plan-type>Arcade</span>(<span
+											data-bill-billing-period
+											>Monthly</span
+										>)
+									</h5>
 									<a href="#">Change</a>
 								</div>
-								<h5>&dollar;9/<span data-moy="">mo</span></h5>
+								<h5>
+									&dollar;<span data-billing-plan-price></span>/<span
+										data-moy=""
+										>mo</span
+									>
+								</h5>
 							</div>
 
 							<!-- ?Rule -->
 							<div class="hr"></div>
 
-							<div class="bill__addons">
+							<div class="bill__addons" data-addons-bill>
 								<div>
 									<p class="text-gray text-sm">Online Services</p>
 									<span class="text-sm"
@@ -270,8 +280,12 @@
 						</div>
 
 						<div class="total-pricing">
-							<p class="text-gray text-sm">Total(per month)</p>
-							<h3>+&dollar;12/<span data-moy="">mo</span></h3>
+							<p class="text-gray text-sm">Total(<span data-per-my></span>)</p>
+							<h3>
+								+&dollar;<span data-final-total></span>/<span data-moy=""
+									>mo</span
+								>
+							</h3>
 						</div>
 					</div>
 					<div class="lower-buttons">
