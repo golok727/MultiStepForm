@@ -1,312 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<script src="radhe.js" defer></script>
-		<title>Multi_step form</title>
-	</head>
-	<body>
-		<!-- <h1>Radhey Shyam</h1> -->
-		<main class="multistep-form-container">
-			<div class="steps-counter">
-				<!--  -->
-				<img class="sidebar" src="./assets/bg-sidebar-desktop.svg" alt="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="radhe.js" defer></script>
+    <title>Multi_step form</title>
+  </head>
+  <body>
+    <!-- <h1>Radhey Shyam</h1> -->
+    <main class="multistep-form-container">
+      <div class="steps-counter">
+        <!--  -->
+        <img class="sidebar" src="./assets/bg-sidebar-desktop.svg" alt="" />
 
-				<div class="steps-counter-steps">
-					<!--  -->
-					<div class="steps-counter-step" data-counter-step="1">
-						<div class="circle current">1</div>
-						<div class="text-white">
-							<span class="text-sm text-gray">STEP 1</span>
-							<h5>YOUR INFO</h5>
-						</div>
-					</div>
+        <div class="steps-counter-steps">
+          <!--  -->
+          <div class="steps-counter-step" data-counter-step="1">
+            <div class="circle current">1</div>
+            <div class="text-white">
+              <span class="text-sm text-gray">STEP 1</span>
+              <h5>YOUR INFO</h5>
+            </div>
+          </div>
 
-					<!--  -->
+          <!--  -->
 
-					<!--  -->
-					<div class="steps-counter-step" data-counter-step="2">
-						<div class="circle">2</div>
-						<div class="text-white">
-							<span class="text-sm text-gray">STEP 2</span>
-							<h5>SELECT PLAN</h5>
-						</div>
-					</div>
-					<!--  -->
+          <!--  -->
+          <div class="steps-counter-step" data-counter-step="2">
+            <div class="circle">2</div>
+            <div class="text-white">
+              <span class="text-sm text-gray">STEP 2</span>
+              <h5>SELECT PLAN</h5>
+            </div>
+          </div>
+          <!--  -->
 
-					<!--  -->
-					<div class="steps-counter-step" data-counter-step="3">
-						<div class="circle">3</div>
-						<div class="text-white">
-							<span class="text-sm text-gray">STEP 3</span>
-							<h5>ADD-ONS</h5>
-						</div>
-					</div>
-					<!--  -->
+          <!--  -->
+          <div class="steps-counter-step" data-counter-step="3">
+            <div class="circle">3</div>
+            <div class="text-white">
+              <span class="text-sm text-gray">STEP 3</span>
+              <h5>ADD-ONS</h5>
+            </div>
+          </div>
+          <!--  -->
 
-					<!--  -->
-					<div class="steps-counter-step" data-counter-step="4">
-						<div class="circle">4</div>
-						<div class="text-white">
-							<span class="text-sm text-gray">STEP 4</span>
-							<h5>SUMMARY</h5>
-						</div>
-					</div>
-					<!--  -->
+          <!--  -->
+          <div class="steps-counter-step" data-counter-step="4">
+            <div class="circle">4</div>
+            <div class="text-white">
+              <span class="text-sm text-gray">STEP 4</span>
+              <h5>SUMMARY</h5>
+            </div>
+          </div>
+          <!--  -->
 
-					<!-- End of Steps container -->
-				</div>
+          <!-- End of Steps container -->
+        </div>
 
-				<!--  -->
-			</div>
-			<!-- End of left side -->
+        <!--  -->
+      </div>
+      <!-- End of left side -->
 
-			<form class="form" data-main-form>
-				<div class="form-container">
-					<!-- Steps -->
+      <form class="form" data-main-form>
+        <div class="form-container">
+          <!-- Steps -->
 
-					<!-- Step-1 -->
-					<!-- TODO Remove the hidden class -->
+          <!-- Step-1 -->
+          <!-- TODO Remove the hidden class -->
 
-					<div class="right-step" data-step="1" data-current-step>
-						<h2>Personal Info</h2>
-						<p class="text-gray pb-2">
-							Please provide your name, email address and phone number.
-						</p>
+          <div class="right-step" data-step="1" data-current-step>
+            <h2>Personal Info</h2>
+            <p class="text-gray pb-2">
+              Please provide your name, email address and phone number.
+            </p>
 
-						<div class="flex-col gap-2">
-							<div class="form-input-container">
-								<label for="name">Name</label>
-								<input
-									placeholder="Your Name"
-									data-name-input
-									type="text"
-									name="name"
-									id="name"
-								/>
-							</div>
-							<div class="form-input-container">
-								<label for="email">Email Address</label>
-								<input
-									placeholder="Email @ Address"
-									data-email-input
-									type="email"
-									name="email"
-									id="email"
-								/>
-							</div>
-							<div class="form-input-container">
-								<label for="number">Phone Number</label>
-								<input
-									placeholder="Ph: XXXXX0000"
-									data-phone-input
-									type="text"
-									name="number"
-									id="number"
-								/>
-							</div>
-						</div>
-					</div>
-					<!-- end of step 1 -->
+            <div class="flex-col gap-2">
+              <div class="form-input-container">
+                <label for="name">Name</label>
+                <input
+                  placeholder="Your Name"
+                  data-name-input
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div class="form-input-container">
+                <label for="email">Email Address</label>
+                <input
+                  placeholder="Email @ Address"
+                  data-email-input
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="form-input-container">
+                <label for="number">Phone Number</label>
+                <input
+                  placeholder="Ph: XXXXX0000"
+                  data-phone-input
+                  type="text"
+                  name="number"
+                  id="number"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- end of step 1 -->
 
-					<!-- Step 2 -->
+          <!-- Step 2 -->
 
-					<div class="right-step hidden" data-step="2">
-						<h2>Select your plan</h2>
-						<p class="text-gray pb-2">
-							You have the option of monthly or yearly billing
-						</p>
+          <div class="right-step hidden" data-step="2">
+            <h2>Select your plan</h2>
+            <p class="text-gray pb-2">
+              You have the option of monthly or yearly billing
+            </p>
 
-						<!-- Plans -->
-						<div class="plans">
-							<!-- * Active class for active effect -->
-							<div class="plan fade-in active" data-plan-type="ARCADE">
-								<img src="assets/icon-arcade.svg" alt="" />
-								<h5>Arcade</h5>
-								<p class="text-gray">
-									$ <span data-plan-price="ARCADE"></span>
-									<span data-moy="">mo</span>
-								</p>
-							</div>
-							<div
-								class="plan fade-in"
-								data-delay="2s"
-								data-plan-type="ADVANCED"
-							>
-								<img src="assets/icon-advanced.svg" alt="" />
-								<h5>Advanced</h5>
-								<p class="text-gray">
-									$ <span data-plan-price="ADVANCED"></span>
-									<span data-moy="">mo</span>
-								</p>
-							</div>
-							<div class="plan fade-in" data-delay="3" data-plan-type="PRO">
-								<img src="assets/icon-pro.svg" alt="" />
-								<h5>Pro</h5>
-								<p class="text-gray">
-									$ <span data-plan-price="PRO"></span>
-									<span data-moy="">mo</span>
-								</p>
-							</div>
-						</div>
-						<!--  End of plans -->
+            <!-- Plans -->
+            <div class="plans">
+              <!-- * Active class for active effect -->
+              <div class="plan fade-in active" data-plan-type="ARCADE">
+                <img src="assets/icon-arcade.svg" alt="" />
+                <h5>Arcade</h5>
+                <p class="text-gray">
+                  $ <span data-plan-price="ARCADE"></span>
+                  <span data-moy="">mo</span>
+                </p>
+              </div>
+              <div
+                class="plan fade-in"
+                data-delay="2s"
+                data-plan-type="ADVANCED"
+              >
+                <img src="assets/icon-advanced.svg" alt="" />
+                <h5>Advanced</h5>
+                <p class="text-gray">
+                  $ <span data-plan-price="ADVANCED"></span>
+                  <span data-moy="">mo</span>
+                </p>
+              </div>
+              <div class="plan fade-in" data-delay="3" data-plan-type="PRO">
+                <img src="assets/icon-pro.svg" alt="" />
+                <h5>Pro</h5>
+                <p class="text-gray">
+                  $ <span data-plan-price="PRO"></span>
+                  <span data-moy="">mo</span>
+                </p>
+              </div>
+            </div>
+            <!--  End of plans -->
 
-						<!-- Monthly or yearly -->
-						<div class="m-y">
-							<h5>Monthly</h5>
-							<input
-								type="checkbox"
-								name="Toggle"
-								data-toggle-button
-								id=""
-								class="toggle-button"
-							/>
-							<h5>Yearly</h5>
-						</div>
-					</div>
-					<!-- End of step 2 -->
+            <!-- Monthly or yearly -->
+            <div class="m-y">
+              <h5>Monthly</h5>
+              <input
+                type="checkbox"
+                name="Toggle"
+                data-toggle-button
+                id=""
+                class="toggle-button"
+              />
+              <h5>Yearly</h5>
+            </div>
+          </div>
+          <!-- End of step 2 -->
 
-					<!-- ** Step 3 -->
-					<div class="right-step hidden" data-step="3">
-						<h2>Pick add-ons</h2>
-						<p class="text-gray pb-2">
-							Add-ons help enhance your gaming experience
-						</p>
+          <!-- ** Step 3 -->
+          <div class="right-step hidden" data-step="3">
+            <h2>Pick add-ons</h2>
+            <p class="text-gray pb-2">
+              Add-ons help enhance your gaming experience
+            </p>
 
-						<!-- ? Addons -->
-						<div class="addons">
-							<div class="addon" data-addon>
-								<div class="addon__left">
-									<input data-addon-checkbox type="checkbox" name="ONS" id="" />
-									<div>
-										<h5>Online Service</h5>
-										<p class="text-gray">Access to multiplayer games</p>
-									</div>
-								</div>
-								<div class="addon__right">
-									<p>
-										+&dollar;<span data-addon-price="ONS"></span>/<span
-											data-moy=""
-											>mo</span
-										>
-									</p>
-								</div>
-							</div>
-							<div class="addon" data-addon>
-								<div class="addon__left">
-									<input data-addon-checkbox type="checkbox" name="LST" id="" />
-									<div>
-										<h5>Larger storage</h5>
-										<p class="text-gray">Extra 1TB of cloud storage</p>
-									</div>
-								</div>
-								<div class="addon__right">
-									<p>
-										+&dollar;<span data-addon-price="LST"></span>/<span
-											data-moy=""
-											>mo</span
-										>
-									</p>
-								</div>
-							</div>
-							<div class="addon" data-addon>
-								<div class="addon__left">
-									<input
-										data-addon-checkbox
-										type="checkbox"
-										name="CUSPRO"
-										id=""
-									/>
-									<div>
-										<h5>Customizable Profile</h5>
-										<p class="text-gray">Custom theme on your profile</p>
-									</div>
-								</div>
-								<div class="addon__right">
-									<p>
-										+&dollar;<span data-addon-price="CUSPRO"></span>/<span
-											data-moy=""
-											>mo</span
-										>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- !End of Step 3 -->
+            <!-- ? Addons -->
+            <div class="addons">
+              <div class="addon" data-addon>
+                <div class="addon__left">
+                  <input data-addon-checkbox type="checkbox" name="ONS" id="" />
+                  <div>
+                    <h5>Online Service</h5>
+                    <p class="text-gray">Access to multiplayer games</p>
+                  </div>
+                </div>
+                <div class="addon__right">
+                  <p>
+                    +&dollar;<span data-addon-price="ONS"></span>/<span
+                      data-moy=""
+                      >mo</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="addon" data-addon>
+                <div class="addon__left">
+                  <input data-addon-checkbox type="checkbox" name="LST" id="" />
+                  <div>
+                    <h5>Larger storage</h5>
+                    <p class="text-gray">Extra 1TB of cloud storage</p>
+                  </div>
+                </div>
+                <div class="addon__right">
+                  <p>
+                    +&dollar;<span data-addon-price="LST"></span>/<span
+                      data-moy=""
+                      >mo</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="addon" data-addon>
+                <div class="addon__left">
+                  <input
+                    data-addon-checkbox
+                    type="checkbox"
+                    name="CUSPRO"
+                    id=""
+                  />
+                  <div>
+                    <h5>Customizable Profile</h5>
+                    <p class="text-gray">Custom theme on your profile</p>
+                  </div>
+                </div>
+                <div class="addon__right">
+                  <p>
+                    +&dollar;<span data-addon-price="CUSPRO"></span>/<span
+                      data-moy=""
+                      >mo</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- !End of Step 3 -->
 
-					<!-- *Step 4 -->
-					<div class="right-step hidden" data-step="4">
-						<h2>Finishing Up</h2>
-						<p class="text-gray pb-2">
-							Double-check everything looks OK before confirming.
-						</p>
+          <!-- *Step 4 -->
+          <div class="right-step hidden" data-step="4">
+            <h2>Finishing Up</h2>
+            <p class="text-gray pb-2">
+              Double-check everything looks OK before confirming.
+            </p>
 
-						<div class="final-bill-statement">
-							<div class="bill__plan-type">
-								<div>
-									<h5>
-										<span data-bill-plan-type>Arcade</span>(<span
-											data-bill-billing-period
-											>Monthly</span
-										>)
-									</h5>
-									<a href="#">Change</a>
-								</div>
-								<h5>
-									&dollar;<span data-billing-plan-price></span>/<span
-										data-moy=""
-										>mo</span
-									>
-								</h5>
-							</div>
+            <div class="final-bill-statement">
+              <div class="bill__plan-type">
+                <div>
+                  <h5>
+                    <span data-bill-plan-type>Arcade</span>(<span
+                      data-bill-billing-period
+                      >Monthly</span
+                    >)
+                  </h5>
+                  <a href="#">Change</a>
+                </div>
+                <h5>
+                  &dollar;<span data-billing-plan-price></span>/<span
+                    data-moy=""
+                    >mo</span
+                  >
+                </h5>
+              </div>
 
-							<!-- ?Rule -->
-							<div class="hr"></div>
+              <!-- ?Rule -->
+              <div class="hr"></div>
 
-							<div class="bill__addons" data-addons-bill>
-								<div>
-									<p class="text-gray text-sm">Online Services</p>
-									<span class="text-sm"
-										>+&dollar;1/<span data-moy="">mo</span></span
-									>
-								</div>
-								<div>
-									<p class="text-gray text-sm">Larger Storage</p>
-									<span class="text-sm"
-										>+&dollar;2/<span data-moy="">mo</span></span
-									>
-								</div>
-							</div>
-						</div>
+              <div class="bill__addons" data-addons-bill>
+                <div>
+                  <p class="text-gray text-sm">Online Services</p>
+                  <span class="text-sm"
+                    >+&dollar;1/<span data-moy="">mo</span></span
+                  >
+                </div>
+                <div>
+                  <p class="text-gray text-sm">Larger Storage</p>
+                  <span class="text-sm"
+                    >+&dollar;2/<span data-moy="">mo</span></span
+                  >
+                </div>
+              </div>
+            </div>
 
-						<div class="total-pricing">
-							<p class="text-gray text-sm">Total(<span data-per-my></span>)</p>
-							<h3 class="total-animation">
-								+&dollar;<span data-final-total></span>/<span data-moy=""
-									>mo</span
-								>
-							</h3>
-						</div>
-					</div>
-					<div class="lower-buttons">
-						<button data-goback class="btn btn-next">Go Back</button>
-						<button data-nextstep class="btn btn-next mr-6" data-next-step>
-							Next Step
-						</button>
-						<input
-							class="hidden btn btn-next mr-6"
-							type="submit"
-							value="Continue"
-							data-submit
-						/>
-					</div>
-				</div>
-				<!-- next -->
-			</form>
-		</main>
-	</body>
+            <div class="total-pricing">
+              <p class="text-gray text-sm">Total(<span data-per-my></span>)</p>
+              <h3 class="total-animation">
+                +&dollar;<span data-final-total></span>/<span data-moy=""
+                  >mo</span
+                >
+              </h3>
+            </div>
+          </div>
+
+          <div class="thank-you hidden">
+            <img src="/assets/icon-thank-you.svg" alt="checkmark" />
+            <h1>Thank you!</h1>
+            <div class="final-thoughts">
+              <p class="text-gray text-sm">
+                Thank you! Thanks for confirming your subscription! We hope you
+                have fun using our platform. If you ever need support, please
+                feel free to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </div>
+
+          <div class="lower-buttons">
+            <button data-goback class="btn btn-next">Go Back</button>
+            <button data-nextstep class="btn btn-next mr-6" data-next-step>
+              Next Step
+            </button>
+            <input
+              class="hidden btn btn-next mr-6"
+              type="submit"
+              value="Continue"
+              data-submit
+            />
+          </div>
+        </div>
+        <!-- next -->
+      </form>
+    </main>
+  </body>
 </html>

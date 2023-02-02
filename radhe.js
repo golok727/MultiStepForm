@@ -192,7 +192,9 @@ function Step3Register() {
 function handleSubmit(e) {
   /** @type {SubmitEvent} e */
   // e.preventDefault();
-
+  document.querySelector(".lower-buttons").remove()
+  document.querySelector("[data-step='4']").classList.add("hidden")
+  document.querySelector(".thank-you").classList.remove("hidden")
   e.preventDefault()
   console.log("Submit SuccessFull")
 }
