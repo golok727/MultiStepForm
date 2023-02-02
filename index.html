@@ -8,9 +8,13 @@
     <script src="radhe.js" defer></script>
     <title>Multi_step form</title>
   </head>
+  <div class="steps-counter-mob">
+    <!-- <img src="/assets/bg-sidebar-mobile.svg" alt="" /> -->
+  </div>
   <body>
-    <!-- <h1>Radhey Shyam</h1> -->
     <main class="multistep-form-container">
+      <!-- <h1>Radhey Shyam</h1> -->
+
       <div class="steps-counter">
         <!--  -->
         <img class="sidebar" src="./assets/bg-sidebar-desktop.svg" alt="" />
@@ -306,14 +310,16 @@
           </div>
 
           <div class="lower-buttons">
-            <button data-goback class="btn btn-next">Go Back</button>
+            <button data-goback class="btn btn-next btn-go-back">
+              Go Back
+            </button>
             <button data-nextstep class="btn btn-next mr-6" data-next-step>
               Next Step
             </button>
             <input
-              class="hidden btn btn-next mr-6"
+              class="hidden btn btn-next btn-submit mr-6"
               type="submit"
-              value="Continue"
+              value="Confirm"
               data-submit
             />
           </div>

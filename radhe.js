@@ -96,7 +96,7 @@ goBackBtn.addEventListener("click", (e) => {
   }
   if (currentStep <= 1) return
   else currentStep--
-
+  if (currentStep === 1) goBackBtn.classList.add("hidden")
   const prevStepDiv = document.querySelector(`[data-step='${currentStep}']`)
   currentStepCountingDiv.classList.add("hidden")
   prevStepDiv.classList.remove("hidden")
@@ -196,7 +196,6 @@ function handleSubmit(e) {
   document.querySelector("[data-step='4']").classList.add("hidden")
   document.querySelector(".thank-you").classList.remove("hidden")
   e.preventDefault()
-  console.log("Submit SuccessFull")
 }
 
 function calculateTotalBill() {
