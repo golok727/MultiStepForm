@@ -81,8 +81,8 @@ body {
 .btn:hover {
   outline: none;
 }
-.btn-next {
-}
+/* .btn-next { */
+/* } */
 .btn-go-back {
   font-weight: 700;
 
