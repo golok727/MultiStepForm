@@ -131,7 +131,7 @@ body {
   box-shadow: var(--shadow-light);
   border-radius: 10px;
   display: flex;
-  /* min-width: 1000px; */
+  width: 1000px;
   overflow: hidden;
 }
 .sidebar {
@@ -396,6 +396,7 @@ body {
     display: none;
   }
 }
+
 @media (max-width: 960px) {
   .multistep-form-container {
     flex-direction: column;
