@@ -268,7 +268,6 @@ function createBill(total) {
 		`
     })
     completedForm["total"] = total
-    console.log(completedForm)
   }
 
   const perMySpan = document.querySelector("[data-per-my]")
@@ -281,6 +280,21 @@ function createBill(total) {
 const changePlan = document.querySelector("[data-change-plan]")
 changePlan.addEventListener("click", (e) => {
   e.preventDefault()
+  currentStep = 2
+  currentDataCounterStep.querySelector(".circle").classList.remove("current")
+  currentDataCounterStep = document.querySelector(
+    `[data-counter-step='${currentStep}']`
+  )
+
+  currentDataCounterStep.querySelector(".circle").classList.add("current")
+
+  currentStepCountingDiv.classList.add("hidden")
+  currentStepCountingDiv = document.querySelector(
+    `[data-step='${currentStep}']`
+  )
+  currentStepCountingDiv.classList.remove("hidden")
+  nextStepBtn.classList.remove("hidden")
+  submitButton.classList.add("hidden")
 })
 // Plans Click control
 ;[...document.querySelectorAll(".plan")].forEach((plan) => {
