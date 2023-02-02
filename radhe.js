@@ -61,6 +61,10 @@ let currentDataCounterStep = document.querySelector(
   `[data-counter-step='${currentStep}']`
 )
 
+let currentDataCounterStepMob = document.querySelector(
+  `[data-counter-step-mob='${currentStep}']`
+)
+
 const mainForm = document.querySelector("[data-main-form]")
 
 // Addons Section Functionality
@@ -84,7 +88,7 @@ const goBackBtn = document.querySelector("[data-goback]")
 const nextStepBtn = document.querySelector("[data-nextstep]")
 const submitButton = document.querySelector("[data-submit]")
 if (currentStep === 1) {
-  ~goBackBtn.classList.add("hidden")
+  goBackBtn.classList.add("hidden")
 }
 
 // Buttons Event Listeners
@@ -108,6 +112,15 @@ goBackBtn.addEventListener("click", (e) => {
   )
   currentDataCounterStepPrev.querySelector(".circle").classList.add("current")
   currentDataCounterStep = currentDataCounterStepPrev
+
+  currentDataCounterStepMob.querySelector(".circle").classList.remove("current")
+  let currentDataCounterStepPrevMob = document.querySelector(
+    `[data-counter-step-mob='${currentStep}']`
+  )
+  currentDataCounterStepPrevMob
+    .querySelector(".circle")
+    .classList.add("current")
+  currentDataCounterStepMob = currentDataCounterStepPrevMob
 })
 
 // ?Next button
@@ -141,6 +154,15 @@ nextStepBtn.addEventListener("click", (e) => {
   )
   currentDataCounterStepNext.querySelector(".circle").classList.add("current")
   currentDataCounterStep = currentDataCounterStepNext
+
+  currentDataCounterStepMob.querySelector(".circle").classList.remove("current")
+  let currentDataCounterStepNextMob = document.querySelector(
+    `[data-counter-step-mob='${currentStep}']`
+  )
+  currentDataCounterStepNextMob
+    .querySelector(".circle")
+    .classList.add("current")
+  currentDataCounterStepMob = currentDataCounterStepNextMob
 })
 
 mainForm.addEventListener("submit", handleSubmit)
@@ -281,12 +303,18 @@ const changePlan = document.querySelector("[data-change-plan]")
 changePlan.addEventListener("click", (e) => {
   e.preventDefault()
   currentStep = 2
+
   currentDataCounterStep.querySelector(".circle").classList.remove("current")
   currentDataCounterStep = document.querySelector(
     `[data-counter-step='${currentStep}']`
   )
-
   currentDataCounterStep.querySelector(".circle").classList.add("current")
+
+  currentDataCounterStepMob.querySelector(".circle").classList.remove("current")
+  currentDataCounterStepMob = document.querySelector(
+    `[data-counter-step-mob='${currentStep}']`
+  )
+  currentDataCounterStepMob.querySelector(".circle").classList.add("current")
 
   currentStepCountingDiv.classList.add("hidden")
   currentStepCountingDiv = document.querySelector(
