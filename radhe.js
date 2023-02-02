@@ -277,8 +277,12 @@ function createBill(total) {
   finalTotalSpan.innerText = total.total
 }
 
+// Make change plan work
+const changePlan = document.querySelector("[data-change-plan]")
+changePlan.addEventListener("click", (e) => {
+  e.preventDefault()
+})
 // Plans Click control
-
 ;[...document.querySelectorAll(".plan")].forEach((plan) => {
   plan.addEventListener("click", (e) => {
     currentPlan.classList.remove("active")
