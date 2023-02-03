@@ -408,7 +408,7 @@ body {
     display: none;
   }
   .steps-counter-mob {
-    background-image: url("/assets/bg-sidebar-mobile.svg");
+    background-image: url("./assets/bg-sidebar-mobile.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
